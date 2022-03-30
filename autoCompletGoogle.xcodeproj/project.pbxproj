@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B048915378291F32B761E7 /* Pods_autoCompletGoogle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533E8206C7DF839D4001D142 /* Pods_autoCompletGoogle.framework */; };
+		9D35FA7427F4D93000C40EA3 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D35FA7327F4D93000C40EA3 /* GooglePlacesManager.swift */; };
 		9D9E6D3627F4CA5300AF7A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E6D3527F4CA5300AF7A44 /* AppDelegate.swift */; };
 		9D9E6D3827F4CA5300AF7A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E6D3727F4CA5300AF7A44 /* SceneDelegate.swift */; };
 		9D9E6D3A27F4CA5300AF7A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E6D3927F4CA5300AF7A44 /* ViewController.swift */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		533E8206C7DF839D4001D142 /* Pods_autoCompletGoogle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autoCompletGoogle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		926F4F0533F1EB920869FBBC /* Pods-autoCompletGoogle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoCompletGoogle.release.xcconfig"; path = "Target Support Files/Pods-autoCompletGoogle/Pods-autoCompletGoogle.release.xcconfig"; sourceTree = "<group>"; };
+		9D35FA7327F4D93000C40EA3 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		9D9E6D3227F4CA5300AF7A44 /* autoCompletGoogle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoCompletGoogle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9E6D3527F4CA5300AF7A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D9E6D3727F4CA5300AF7A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		9D9E6D4127F4CA5500AF7A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D9E6D4327F4CA5500AF7A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D9E6D4927F4D1A400AF7A44 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CC751B467249707025FAC039 /* Pods-autoCompletGoogle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoCompletGoogle.debug.xcconfig"; path = "Target Support Files/Pods-autoCompletGoogle/Pods-autoCompletGoogle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B048915378291F32B761E7 /* Pods_autoCompletGoogle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44FEF228056BD6EFA0216B78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533E8206C7DF839D4001D142 /* Pods_autoCompletGoogle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E1C6652CC17B5359C1A8872 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC751B467249707025FAC039 /* Pods-autoCompletGoogle.debug.xcconfig */,
+				926F4F0533F1EB920869FBBC /* Pods-autoCompletGoogle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9D9E6D2927F4CA5300AF7A44 = {
 			isa = PBXGroup;
 			children = (
 				9D9E6D3427F4CA5300AF7A44 /* autoCompletGoogle */,
 				9D9E6D3327F4CA5300AF7A44 /* Products */,
+				5E1C6652CC17B5359C1A8872 /* Pods */,
+				44FEF228056BD6EFA0216B78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +92,7 @@
 				9D9E6D3E27F4CA5500AF7A44 /* Assets.xcassets */,
 				9D9E6D4027F4CA5500AF7A44 /* LaunchScreen.storyboard */,
 				9D9E6D4327F4CA5500AF7A44 /* Info.plist */,
+				9D35FA7327F4D93000C40EA3 /* GooglePlacesManager.swift */,
 			);
 			path = autoCompletGoogle;
 			sourceTree = "<group>";
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D9E6D4627F4CA5500AF7A44 /* Build configuration list for PBXNativeTarget "autoCompletGoogle" */;
 			buildPhases = (
+				06533F7B6623DA3F528E49AA /* [CP] Check Pods Manifest.lock */,
 				9D9E6D2E27F4CA5300AF7A44 /* Sources */,
 				9D9E6D2F27F4CA5300AF7A44 /* Frameworks */,
 				9D9E6D3027F4CA5300AF7A44 /* Resources */,
+				DB0A2B09263DDA6116B33AF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,12 +165,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06533F7B6623DA3F528E49AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-autoCompletGoogle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0A2B09263DDA6116B33AF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autoCompletGoogle/Pods-autoCompletGoogle-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autoCompletGoogle/Pods-autoCompletGoogle-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-autoCompletGoogle/Pods-autoCompletGoogle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D9E6D2E27F4CA5300AF7A44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9D9E6D3A27F4CA5300AF7A44 /* ViewController.swift in Sources */,
+				9D35FA7427F4D93000C40EA3 /* GooglePlacesManager.swift in Sources */,
 				9D9E6D3627F4CA5300AF7A44 /* AppDelegate.swift in Sources */,
 				9D9E6D3827F4CA5300AF7A44 /* SceneDelegate.swift in Sources */,
 				9D9E6D4A27F4D1A400AF7A44 /* ResultsViewController.swift in Sources */,
@@ -286,6 +358,7 @@
 		};
 		9D9E6D4727F4CA5500AF7A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC751B467249707025FAC039 /* Pods-autoCompletGoogle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +387,7 @@
 		};
 		9D9E6D4827F4CA5500AF7A44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926F4F0533F1EB920869FBBC /* Pods-autoCompletGoogle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

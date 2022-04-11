@@ -25,7 +25,8 @@ class ViewController: UIViewController, UISearchResultsUpdating {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        mapView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.size.width, height: view.frame.size.height - view.safeAreaInsets.top)
+        mapView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.frame.size.width,
+            height: view.frame.size.height - view.safeAreaInsets.top)
     }
     func updateSearchResults(for searchController: UISearchController) {
         guard let query = searchController.searchBar.text,
@@ -34,6 +35,9 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         else {
             return
         }
+        
+        resultsVC.delegate = self
+        
         GooglePlacesManager.shared.findPlaces(query: query) {
             result in
             switch result {
@@ -49,4 +53,18 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         }
     }
 }
-
+extension ViewController: ResultsViewControllerDelegate {
+    func didTapPlace(with coordinates: CLLocationCoordinate2D) {
+        
+        // Remove all map pins
+     
+         //Add a map pin
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinates
+        mapView.addAnnotation(pin)
+        mapView.setRegion(MKCoordinateRegion(center: coordinates,
+                                             span: MKCoordinateSpan (
+                                                latitudeDelta: 0.2, longitudeDelta: 0.2
+                                             )), animated: true)
+    }
+}
